@@ -91,7 +91,7 @@ src="https://www.facebook.com/tr?id=25451780184487590&ev=PageView&noscript=1"
     <p class="text-red-600 font-semibold mb-4">📊 7 years experience 📊</p>
 
     <!-- CTA Button -->
-    <a href="https://t.me/+UJ3Mup9g011iMjY1" target="_blank" class="btn-telegram mb-6">
+    <a href="https://t.me/+UJ3Mup9g011iMjY1" target="_blank" class="btn-telegram mb-6" onclick="trackSubscribe()">
 
       
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -116,4 +116,12 @@ src="https://www.facebook.com/tr?id=25451780184487590&ev=PageView&noscript=1"
     </p>
   </div>
 
+  
+<script>
+    function customEvent() {
+        fbq('track', 'Subscribe');
+    }
+</script>
+
+  
 </body></html>
