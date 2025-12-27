@@ -118,10 +118,22 @@ src="https://www.facebook.com/tr?id=25451780184487590&ev=PageView&noscript=1"
 
   
 <script>
-    function trackSubscribe() {
-        fbq('track', 'Subscribe');
+  function trackSubscribe() {
+    if (localStorage.getItem('subscribed') === 'true') {
+      console.log("Already subscribed event fired, not sending again.");
+      return;
     }
+
+    const eventId = 'subscribe_' + Date.now();
+
+    if (typeof fbq === "function") {
+      fbq('trackCustom', 'Subscribe', {}, { eventID: eventId });
+    }
+
+    localStorage.setItem('subscribed', 'true');
+  }
 </script>
+
 
   
 </body></html>
