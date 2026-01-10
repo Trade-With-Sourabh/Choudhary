@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access Confirmation | Trading Community</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  margin:0;
+  background:#f2f2f2;
+}
+
+/* Overlay */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+/* Popup Box */
+.popup{
+  background:#ffffff;
+  width:90%;
+  max-width:380px;
+  padding:25px 22px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 0 25px rgba(0,0,0,0.35);
+}
+
+.popup h3{
+  margin-top:0;
+  font-size:20px;
+  color:#111;
+}
+
+.popup p{
+  font-size:14px;
+  color:#333;
+  line-height:1.6;
+  margin:12px 0;
+}
+
+/* Buttons */
+.btn{
+  width:100%;
+  padding:13px;
+  border:none;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  margin-top:12px;
+}
+
+.btn-yes{
+  background:#2f89e5;
+  color:#fff;
+}
+
+.btn-yes:hover{
+  background:#246fc0;
+}
+
+.btn-no{
+  background:#e0e0e0;
+  color:#333;
+}
+
+.note{
+  font-size:12px;
+  color:#666;
+  margin-top:14px;
+  line-height:1.5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+  <div class="popup">
+
+    <h3>
+      📊 Trading Community Access<br>
+      With Sourabh Choudhary
+    </h3>
+
+    <p>
+      This platform is intended for individuals who have a genuine interest in
+      <strong>Stock Market and Cryptocurrency trading</strong>.
+    </p>
+
+    <p>
+      We use Telegram to share market observations, educational content,
+      and trading-related discussions for learning and awareness purposes.
+    </p>
+
+    <p style="font-size:13px; color:#444; font-weight:600;">
+      Please continue only if you understand how financial markets work.
+    </p>
+
+    <button class="btn btn-yes" onclick="acceptTelegram()">
+      YES, I UNDERSTAND THE RISK & HAVE TELEGRAM
+    </button>
+
+    <button class="btn btn-no" onclick="denyTelegram()">
+      NO, I DO NOT WISH TO CONTINUE
+    </button>
+
+    <div class="note">
+      ⚠️ Trading in stock market & cryptocurrency involves market risk.<br>
+      No guaranteed returns are promised. This is not financial advice.<br>
+      Participation is voluntary and at your own discretion.
+    </div>
+
+  </div>
+</div>
+
+<script>
+function acceptTelegram(){
+  // MAIN LANDING PAGE
+  window.location.href = "landing.html";
+}
+
+function denyTelegram(){
+  // GO BACK TO PREVIOUS PAGE
+  window.history.back();
+}
+</script>
+
+</body>
+</html>
